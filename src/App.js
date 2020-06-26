@@ -20,7 +20,7 @@ function App() {
   return (
     <GlobalProvider>
       <Router basename={"/travel-budget"}>
-        <Container fluid className="bg-light min-vh-100">
+        <Container fluid className="min-vh-100">
           <Header />
           <Route path="/set-budget" exact component={SetBudget} />
           <Route path="/" exact component={BudgetRemainingSpent} />

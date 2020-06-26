@@ -17,7 +17,10 @@ export const Footer = () => {
           className="bg-transparent btn p-0 border-0"
           onClick={() => deleteTransactions(transactions)}
         >
-          <FontAwesomeIcon className="fa-md text-purple" icon={faRedo} />
+          <FontAwesomeIcon
+            className="fa-md text-purple text-dark"
+            icon={faRedo}
+          />
           <p className="d-block text-secondary sm-title-text">Clear All</p>
         </Button>
       </Col>

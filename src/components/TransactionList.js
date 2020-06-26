@@ -24,7 +24,7 @@ export const TransactionList = () => {
           <Col className="text-right">
             <Link to="/add-transaction">
               <FontAwesomeIcon
-                className="fa-2x text-dark bg-white rounded-circle align-middle"
+                className="fa-2x text-blue bg-white rounded-circle align-middle"
                 icon={faPlusCircle}
               />
             </Link>
@@ -33,7 +33,7 @@ export const TransactionList = () => {
       </Card>
       <ListGroup>
         {transactions < 1 ? (
-          <p className="mt-3 text-center">Purchases is Empty.</p>
+          <p className="mt-3 text-center text-white">Purchases is Empty.</p>
         ) : (
           transactions.map((transaction) => (
             <Transaction key={transaction.id} transaction={transaction} />

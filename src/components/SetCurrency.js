@@ -199,7 +199,7 @@ function App() {
       <Row>
         <Col>
           <Link to="/">
-            <p className="d-block text-secondary sm-title-text">
+            <p className="d-block text-white sm-title-text">
               Back to Dashboard
             </p>
           </Link>
@@ -230,7 +230,7 @@ function App() {
               />
             </Card.Body>
             <Card.Footer>
-              <Button onClick={onSubmit} variant="btn btn-outline-purple">
+              <Button onClick={onSubmit} variant="btn btn-outline-blue">
                 Set
               </Button>
             </Card.Footer>

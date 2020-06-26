@@ -22,13 +22,13 @@ export const Transaction = ({ transaction }) => {
     <ListGroup.Item className="shadow mb-2">
       <Row>
         <Col xs={1} className="text-left">
-          <FontAwesomeIcon className="fa-lg" icon={faShoppingBag} />
+          <FontAwesomeIcon className="fa-lg text-blue" icon={faShoppingBag} />
         </Col>
         <Col xs={4} className="text-left">
           {transaction.text}
         </Col>
-        <Col className="text-left">
-          <span className="text-minus d-block">
+        <Col xs={5} className="text-left">
+          <span className="text-dark d-block">
             {transaction.toSymbol}
             {displayToAmount} {transaction.selectedCurrencyTo}
           </span>

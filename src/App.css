@@ -7,7 +7,13 @@ html {
 
 body {
   font-family: "Muli", Arial, Helvetica, sans-serif;
-  color: #505684;
+  color: #0c3968;
+  background-color: #204b99;
+}
+
+.nav-brand {
+  height: 30px;
+  width: auto;
 }
 
 .toast {
@@ -21,16 +27,28 @@ body {
   padding-bottom: 100px;
 }
 
+.card {
+  border-radius: 10px;
+}
+
+.list-group-item {
+  border-radius: 10px !important;
+}
+
 .text-dark {
-  color: #505684 !important;
+  color: #0c3968 !important;
 }
 
-.text-plus {
-  color: #61c497;
+.bg-blue {
+  background-color: #204b99;
 }
 
-.bg-green {
-  background-color: #68bcbe;
+.text-blue {
+  color: #204b99;
+}
+
+.text-light {
+  color: #8ca1ca !important;
 }
 
 .title-text {
@@ -49,23 +67,19 @@ body {
   color: #f5787e;
 }
 
-.text-purple {
-  color: #7059db;
+.text-plus {
+  color: #33ad79;
 }
 
-.bg-purple {
-  color: #7059db;
-}
-
-.btn-outline-purple {
-  border: 2px solid #7059db;
+.btn-outline-blue {
+  border: 2px solid #204b99;
   border-radius: 5px;
-  color: #7059db;
+  color: #204b99;
   font-weight: 700;
 }
 
-.btn-outline-purple:hover {
-  background-color: #7059db;
+.btn-outline-blue:hover {
+  background-color: #204b99;
   color: #fff;
 }
 

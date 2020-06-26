@@ -35,7 +35,7 @@ export const Settings = () => {
             onClick={onSubmit}
             className="text-dark bg-transparent border-0 p-0"
           >
-            Reset All
+            Clear Budget
           </Button>
         </Card>
       </Col>

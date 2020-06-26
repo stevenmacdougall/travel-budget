@@ -88,7 +88,7 @@ function App(currency) {
       <Row>
         <Col>
           <Link to="/">
-            <p className="d-block text-secondary sm-title-text">
+            <p className="d-block text-white sm-title-text">
               Back to Dashboard
             </p>
           </Link>
@@ -122,7 +122,7 @@ function App(currency) {
                 </div>
               </Card.Body>
               <Card.Footer>
-                <Button onClick={onSubmit} variant="btn btn-outline-purple">
+                <Button onClick={onSubmit} variant="btn btn-outline-blue">
                   Add
                 </Button>
               </Card.Footer>
