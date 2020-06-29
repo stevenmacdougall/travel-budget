@@ -20,15 +20,15 @@ function App() {
   return (
     <GlobalProvider>
       <Router basename={"/travel-budget"}>
-        <Container fluid className="min-vh-100">
-          <Header />
-          <Route path="/set-budget" exact component={SetBudget} />
+        <Container className="p-0 border shadow-lg">
+          <Route path="/" exact component={Header} />
           <Route path="/" exact component={BudgetRemainingSpent} />
-          <Route path="/add-transaction" exact component={AddTransaction} />
           <Route path="/" exact component={TransactionList} />
+          <Route path="/" exact component={Footer} />
+          <Route path="/set-budget" exact component={SetBudget} />
+          <Route path="/add-transaction" exact component={AddTransaction} />
           <Route path="/settings" exact component={Settings} />
           <Route path="/set-currency" exact component={SetCurrency} />
-          <Route path="/" exact component={Footer} />
         </Container>
       </Router>
     </GlobalProvider>

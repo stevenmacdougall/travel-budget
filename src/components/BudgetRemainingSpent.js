@@ -1,8 +1,7 @@
 import React, { useContext } from "react";
 import { GlobalContext } from "../context/GlobalState";
-import { Link } from "react-router-dom";
 
-import { Row, Col, Card } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 
 export const BudgetRemainingSpent = () => {
   const { budgets } = useContext(GlobalContext);
@@ -56,63 +55,45 @@ export const BudgetRemainingSpent = () => {
 
   return (
     <>
-      <Row className="mb-5 text-center">
+      <Row className="text-center pl-4 pr-4">
         <Col>
-          <h4 className="sm-title-text mb-0 text-white">Remaining</h4>
+          <h4 className="xs-title-text mb-0 text-white">Remaining</h4>
           <p className="mb-0 lg-text text-white font-weight-bold">
             {toCurrencySymbol}
             {displayRemainingTo} {budgetToCurrency}
           </p>
-          <p className="title-text mb-0 text-light">
+          <p className="title-text mb-0 text-white">
             {fromCurrencySymbol}
             {displayRemainingFrom} {budgetFromCurrency}
           </p>
-          <p className="text-minus">
-            {displayRemainingTo < 0 ? "You have gone over your budget." : ""}
-          </p>
-          {isNaN(budgets) ? (
-            ""
-          ) : (
-            <Link to="set-budget" className="text-white mb-3">
-              Set Budget
-            </Link>
-          )}
+
+          {displayRemainingTo < 0
+            ? alert("You have gone over your budget.")
+            : ""}
         </Col>
       </Row>
-      <Row className="mb-3">
-        <Col
-          xs={{ span: 6, offset: 0 }}
-          md={{ span: 3, offset: 0 }}
-          className="text-center"
-        >
-          <Card className="p-3">
-            <h4 className="sm-title-text mb-0">Budget</h4>
-            <p className="title-text mb-0 text-plus font-weight-bold">
-              {toCurrencySymbol}
-              {displayBudgetTo} {budgetToCurrency}{" "}
-            </p>
-            <p className="sm-title-text mb-0 text-light">
-              {fromCurrencySymbol}
-              {displayBudgetFrom} {budgetFromCurrency}
-            </p>
-          </Card>
+      <Row className="pl-4 pr-4 mt-2">
+        <Col>
+          <h4 className="xs-title-text mb-0 text-white">Budget</h4>
+          <p className="sm-title-text mb-0 text-white font-weight-bold">
+            {toCurrencySymbol}
+            {displayBudgetTo} {budgetToCurrency}{" "}
+          </p>
+          <p className="xs-title-text mb-0 text-white">
+            {fromCurrencySymbol}
+            {displayBudgetFrom} {budgetFromCurrency}
+          </p>
         </Col>
-        <Col
-          xs={{ span: 6, offset: 0 }}
-          md={{ span: 3, offset: 6 }}
-          className="text-center"
-        >
-          <Card className="p-3">
-            <h4 className="sm-title-text mb-0">Spent</h4>
-            <p className="title-text mb-0 text-minus font-weight-bold">
-              {toCurrencySymbol}
-              {displaySpentTo} {budgetToCurrency}{" "}
-            </p>
-            <p className="sm-title-text mb-0 text-light">
-              {fromCurrencySymbol}
-              {displaySpentFrom} {budgetFromCurrency}
-            </p>
-          </Card>
+        <Col className="text-right">
+          <h4 className="xs-title-text mb-0 text-white">Spent</h4>
+          <p className="sm-title-text mb-0 text-white font-weight-bold">
+            {toCurrencySymbol}
+            {displaySpentTo} {budgetToCurrency}{" "}
+          </p>
+          <p className="xs-title-text mb-0 text-white">
+            {fromCurrencySymbol}
+            {displaySpentFrom} {budgetFromCurrency}
+          </p>
         </Col>
       </Row>
     </>

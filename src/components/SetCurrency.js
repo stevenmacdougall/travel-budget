@@ -7,6 +7,9 @@ import { Button, Row, Col, Card } from "react-bootstrap";
 
 import CurrencySelect from "./CurrencySelect";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+
 const BASE_URL = "https://api.exchangeratesapi.io/latest";
 
 function App() {
@@ -198,39 +201,34 @@ function App() {
     <>
       <Row>
         <Col>
-          <Link to="/">
-            <p className="d-block text-white sm-title-text">
-              Back to Dashboard
-            </p>
-          </Link>
-        </Col>
-      </Row>
-      <Row>
-        <Col>
-          <Card className="text-center">
-            <Card.Header className="p-4">
-              <h1 className="title-text">
-                Set Currency Preferences for your trip
+          <Card className="pl-3 pr-3 pt-5 border-0 rounded-0 h-100">
+            <Card.Header className="border-0 bg-white pt-5">
+              <Link to="/settings" className="text-dark mb-3 pt-5">
+                <FontAwesomeIcon
+                  className="fa-lg text-dark"
+                  icon={faArrowLeft}
+                />
+              </Link>
+              <h1 className="md-title-text text-center mt-5">
+                Let's Get Started
               </h1>
             </Card.Header>
             <Card.Body>
-              <p className="">Select your usual currency:</p>
+              <p className="text-secondary sm-title-text">From</p>
               <CurrencySelect
                 currencyOptions={currencyOptions}
                 selectedCurrency={fromCurrency}
                 onChangeCurrency={(e) => setFromCurrency(e.target.value)}
               />
-              <p className="mt-4">
-                Select the currency of the country you are visiting:
-              </p>
+              <p className="mt-5 text-secondary sm-title-text">To</p>
               <CurrencySelect
                 currencyOptions={currencyOptions}
                 selectedCurrency={toCurrency}
                 onChangeCurrency={(e) => setToCurrency(e.target.value)}
               />
             </Card.Body>
-            <Card.Footer>
-              <Button onClick={onSubmit} variant="btn btn-outline-blue">
+            <Card.Footer className="border-0 bg-white text-center">
+              <Button onClick={onSubmit} variant="btn btn-blue rounded-50 mb-5">
                 Set
               </Button>
             </Card.Footer>

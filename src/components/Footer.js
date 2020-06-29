@@ -11,14 +11,14 @@ export const Footer = () => {
   const { transactions } = useContext(GlobalContext);
   const { deleteTransactions } = useContext(GlobalContext);
   return (
-    <Row className="footer pt-3 bg-white fixed-bottom border-top">
-      <Col className="text-right pr-5">
+    <Row id="footer" className="bg-white pt-3 fixed-bottom border-top">
+      <Col className="text-right">
         <Button
           className="bg-transparent btn p-0 border-0"
           onClick={() => deleteTransactions(transactions)}
         >
           <FontAwesomeIcon
-            className="fa-md text-purple text-dark"
+            className="fa-lg text-purple text-dark"
             icon={faRedo}
           />
           <p className="d-block text-secondary sm-title-text">Clear All</p>

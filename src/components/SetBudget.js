@@ -7,6 +7,9 @@ import { Button, Row, Col, Card } from "react-bootstrap";
 
 import BudgetInputs from "./BudgetInputs";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+
 const BASE_URL = "https://api.exchangeratesapi.io/latest";
 
 function App(currency) {
@@ -85,23 +88,29 @@ function App(currency) {
 
   return (
     <>
-      <Row>
-        <Col>
-          <Link to="/">
-            <p className="d-block text-white sm-title-text">
-              Back to Dashboard
-            </p>
-          </Link>
-        </Col>
-      </Row>
       {isNaN(currencys) ? (
         <Row>
           <Col>
-            <Card>
-              <Card.Header className="p-4">
-                <h1 className="title-text">Set your trip budget</h1>
+            <Card className="pl-3 pr-3 pt-5 border-0 rounded-0 h-100">
+              <Card.Header className="pt-5 border-0 bg-white">
+                <Link to="/settings" className="text-dark mb-3 pt-5">
+                  <FontAwesomeIcon
+                    className="fa-lg text-dark"
+                    icon={faArrowLeft}
+                  />
+                </Link>
+                <h1 className="md-title-text text-center mt-5">
+                  Let's Get Started
+                </h1>{" "}
               </Card.Header>
               <Card.Body>
+                <p className="sm-title-text text-secondary mb-3 text-center">
+                  Your Budget
+                </p>
+                <p className="xs-title-text text-secondary mb-5 text-center">
+                  Enter your budget in either currency.
+                </p>
+
                 <div className="mb-3">
                   <span className="d-inline">{toSymbol}</span>
                   <BudgetInputs
@@ -112,7 +121,9 @@ function App(currency) {
                   />
                 </div>
                 <div>
-                  <span className="d-inline">{fromSymbol}</span>
+                  <span className="d-inline sm-title-text text-secondary">
+                    {fromSymbol}
+                  </span>
                   <BudgetInputs
                     className="d-inline"
                     selectedCurrency={fromCurrency}
@@ -121,8 +132,11 @@ function App(currency) {
                   />
                 </div>
               </Card.Body>
-              <Card.Footer>
-                <Button onClick={onSubmit} variant="btn btn-outline-blue">
+              <Card.Footer className="border-0 bg-white text-center">
+                <Button
+                  onClick={onSubmit}
+                  variant="btn btn-blue rounded-50 mb-5"
+                >
                   Add
                 </Button>
               </Card.Footer>
@@ -132,16 +146,30 @@ function App(currency) {
       ) : (
         <Row>
           <Col>
-            <Card className="p-5">
-              <p>
-                Please set your currency preferences before setting a your
-                budget.
-              </p>
-              <Link to="/set-currency">
-                <p className="d-block text-secondary sm-title-text">
-                  Currency Preferences
+            <Card className="pl-3 pr-3 pt-5 border-0 rounded-0 h-100">
+              <Card.Header className="pt-5 border-0 bg-white">
+                <Link to="/settings" className="text-dark mb-3 pt-5">
+                  <FontAwesomeIcon
+                    className="fa-lg text-dark"
+                    icon={faArrowLeft}
+                  />
+                </Link>
+                <h1 className="md-title-text text-center mt-5">
+                  Before You Set Your Budget
+                </h1>{" "}
+              </Card.Header>
+              <Card.Body>
+                <p className="text-center mb-4 sm-title-text text-secondary">
+                  Please set your currency preferences before setting a your
+                  budget.
                 </p>
-              </Link>
+                <Link
+                  to="/set-currency"
+                  className="md-title-text text-dark mb-3 text-center bg-light p-2 rounded-50 d-block"
+                >
+                  Currency Preferences
+                </Link>
+              </Card.Body>
             </Card>
           </Col>
         </Row>

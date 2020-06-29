@@ -14,32 +14,32 @@ export const TransactionList = () => {
 
   return (
     <>
-      <Card className="p-3 mb-2 shadow">
-        <Row>
-          <Col>
-            <h3 className="font-weight-bold title-text d-inline align-middle">
-              Purchases
+      <Card id="expenses-list" className="p-4 border-0">
+        <Row className="mt-3 mb-4">
+          <Col className="pt-2">
+            <h3 className="font-weight-bold md-title-text d-inline">
+              All Expenses
             </h3>
           </Col>
           <Col className="text-right">
             <Link to="/add-transaction">
               <FontAwesomeIcon
-                className="fa-2x text-blue bg-white rounded-circle align-middle"
+                className="fa-3x text-blue bg-white rounded-circle"
                 icon={faPlusCircle}
               />
             </Link>
           </Col>
         </Row>
+        <ListGroup>
+          {transactions < 1 ? (
+            <p className="mt-3 text-center">Expenses List is Empty</p>
+          ) : (
+            transactions.map((transaction) => (
+              <Transaction key={transaction.id} transaction={transaction} />
+            ))
+          )}
+        </ListGroup>
       </Card>
-      <ListGroup>
-        {transactions < 1 ? (
-          <p className="mt-3 text-center text-white">Purchases is Empty.</p>
-        ) : (
-          transactions.map((transaction) => (
-            <Transaction key={transaction.id} transaction={transaction} />
-          ))
-        )}
-      </ListGroup>
     </>
   );
 };

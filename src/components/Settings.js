@@ -5,6 +5,9 @@ import { useHistory } from "react-router-dom";
 
 import { Row, Col, Card, Button } from "react-bootstrap";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+
 export const Settings = () => {
   const history = useHistory();
 
@@ -19,24 +22,35 @@ export const Settings = () => {
   };
 
   return (
-    <Row className="mb-3 text-center">
+    <Row>
       <Col>
-        <Card className="pt-5 pb-5">
-          <Link to="/" className="text-dark mb-3">
-            Dashboard
-          </Link>
-          <Link to="/set-currency" className="text-dark mb-3">
-            Currency Preferences
-          </Link>
-          <Link to="set-budget" className="text-dark mb-3">
-            Set Budget
-          </Link>
-          <Button
-            onClick={onSubmit}
-            className="text-dark bg-transparent border-0 p-0"
-          >
-            Clear Budget
-          </Button>
+        <Card className="pl-3 pr-3 pt-5 border-0 rounded-0 h-100">
+          <Card.Header className="pt-5 border-0 bg-white">
+            <Link to="/" className="text-dark mb-3 pt-5">
+              <FontAwesomeIcon className="fa-lg text-dark" icon={faArrowLeft} />
+            </Link>
+            <h1 className="md-title-text text-center mt-5">Settings</h1>{" "}
+          </Card.Header>
+          <Card.Body>
+            <Link
+              to="/set-currency"
+              className="md-title-text text-dark mb-3 text-center bg-light p-2 rounded-50 d-block"
+            >
+              Currency Preferences
+            </Link>
+            <Link
+              to="set-budget"
+              className="md-title-text text-dark mb-3 text-center bg-light p-2 rounded-50 d-block"
+            >
+              Set Budget
+            </Link>
+            <Button
+              onClick={onSubmit}
+              className="text-dark md-title-text border-0 p-0 text-center bg-light p-2 rounded-50 d-block w-100"
+            >
+              Clear Budget
+            </Button>
+          </Card.Body>
         </Card>
       </Col>
     </Row>

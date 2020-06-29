@@ -19,10 +19,15 @@ export const Transaction = ({ transaction }) => {
   var displayFromAmount = fromAmount.toFixed(2);
 
   return (
-    <ListGroup.Item className="shadow mb-2">
+    <ListGroup.Item className="mb-2 bg-light border-0">
       <Row>
         <Col xs={1} className="text-left">
-          <FontAwesomeIcon className="fa-lg text-blue" icon={faShoppingBag} />
+          <span className="sm-blue-square">
+            <FontAwesomeIcon
+              className="fa-md text-white"
+              icon={faShoppingBag}
+            />
+          </span>
         </Col>
         <Col xs={4} className="text-left">
           {transaction.text}
@@ -32,10 +37,10 @@ export const Transaction = ({ transaction }) => {
             {transaction.toSymbol}
             {displayToAmount} {transaction.selectedCurrencyTo}
           </span>
-          <small className="d-block">
+          <span className="d-block xs-title-text text-secondary">
             {transaction.fromSymbol}
             {displayFromAmount} {transaction.selectedCurrencyFrom}
-          </small>
+          </span>
         </Col>
         <Col className="text-right">
           <Button
