@@ -8,7 +8,7 @@ import { Button, Row, Col, Card } from "react-bootstrap";
 import BudgetInputs from "./BudgetInputs";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 
 const BASE_URL = "https://api.exchangeratesapi.io/latest";
 
@@ -91,12 +91,12 @@ function App(currency) {
       {isNaN(currencys) ? (
         <Row>
           <Col>
-            <Card className="pl-3 pr-3 pt-5 border-0 rounded-0 h-100">
-              <Card.Header className="pt-5 border-0 bg-white">
+            <Card className="pl-3 pr-3 pt-5 border-0 rounded-0 h-100 bg-light-blue">
+              <Card.Header className="pt-5 border-0 bg-light-blue">
                 <Link to="/settings" className="text-dark mb-3 pt-5">
                   <FontAwesomeIcon
                     className="fa-lg text-dark"
-                    icon={faArrowLeft}
+                    icon={faChevronLeft}
                   />
                 </Link>
                 <h1 className="md-title-text text-center mt-5">
@@ -132,12 +132,12 @@ function App(currency) {
                   />
                 </div>
               </Card.Body>
-              <Card.Footer className="border-0 bg-white text-center">
+              <Card.Footer className="border-0 bg-light-blue text-center bg-light-blue">
                 <Button
                   onClick={onSubmit}
                   variant="btn btn-blue rounded-50 mb-5"
                 >
-                  Add
+                  Set
                 </Button>
               </Card.Footer>
             </Card>
@@ -146,12 +146,12 @@ function App(currency) {
       ) : (
         <Row>
           <Col>
-            <Card className="pl-3 pr-3 pt-5 border-0 rounded-0 h-100">
-              <Card.Header className="pt-5 border-0 bg-white">
+            <Card className="pl-3 pr-3 pt-5 border-0 bg-light-blue rounded-0 h-100">
+              <Card.Header className="pt-5 border-0 bg-light-blue">
                 <Link to="/settings" className="text-dark mb-3 pt-5">
                   <FontAwesomeIcon
                     className="fa-lg text-dark"
-                    icon={faArrowLeft}
+                    icon={faChevronLeft}
                   />
                 </Link>
                 <h1 className="md-title-text text-center mt-5">

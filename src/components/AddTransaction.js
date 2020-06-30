@@ -94,8 +94,8 @@ function App() {
       {isNaN(currencys) ? (
         <Row>
           <Col>
-            <Card className="pl-3 pr-3 pt-5 border-0 rounded-0 h-100">
-              <Card.Header className="pt-5 border-0 bg-white">
+            <Card className="pl-3 pr-3 pt-5 bg-light-blue border-0 rounded-0 h-100">
+              <Card.Header className="pt-5 border-0 bg-light-blue">
                 <Link to="/settings" className="text-dark mb-3 pt-5">
                   <FontAwesomeIcon
                     className="fa-lg text-dark"
@@ -119,7 +119,7 @@ function App() {
                     value={text}
                     onChange={(e) => setText(e.target.value)}
                     placeholder="Enter item name..."
-                    className="input pl-4 pr-4 pt-3 pb-3 shadow-0 border-light rounded-50 text-secondary ml-2 mr-2"
+                    className="input pl-4 pr-4 pt-3 pb-3 shadow border-0 rounded-50 text-secondary ml-2 mr-2"
                   />
                 </div>
                 <div className="mb-3">
@@ -141,7 +141,7 @@ function App() {
                   />
                 </div>
               </Card.Body>
-              <Card.Footer className="border-0 bg-white text-center">
+              <Card.Footer className="border-0 bg-light-blue text-center">
                 <Button
                   onClick={onSubmit}
                   variant="btn btn-blue rounded-50 mb-5"

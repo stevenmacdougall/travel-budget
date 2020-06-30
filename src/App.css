@@ -2,7 +2,7 @@
 
 body {
   font-family: "Muli", Arial, Helvetica, sans-serif;
-  color: #333;
+  color: #29304d;
 }
 
 .container {
@@ -48,19 +48,13 @@ a:hover {
   height: 425px;
   width: 375px;
   overflow: auto;
-  border-top-left-radius: 40px;
-  border-top-right-radius: 40px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
 }
 
 .nav-brand {
   height: 27px;
   width: auto;
-}
-
-.toast {
-  z-index: 999 !important;
-  right: 0;
-  top: 110px;
 }
 
 .container-fluid {
@@ -85,7 +79,7 @@ a:hover {
 }
 
 .text-dark {
-  color: #333 !important;
+  color: #29304d !important;
 }
 
 .bg-blue {
@@ -98,8 +92,16 @@ a:hover {
   );
 }
 
+.bg-light-blue {
+  background-color: #f7f9fc;
+}
+
 .text-blue {
   color: rgb(27, 85, 244);
+}
+
+.text-light {
+  color: #7f8599 !important;
 }
 
 .text-minus {

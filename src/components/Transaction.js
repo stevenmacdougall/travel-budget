@@ -19,7 +19,7 @@ export const Transaction = ({ transaction }) => {
   var displayFromAmount = fromAmount.toFixed(2);
 
   return (
-    <ListGroup.Item className="mb-2 bg-light border-0">
+    <ListGroup.Item className="mb-2 bg-white shadow border-0">
       <Row>
         <Col xs={1} className="text-left">
           <span className="sm-blue-square">

@@ -8,7 +8,7 @@ import { Button, Row, Col, Card } from "react-bootstrap";
 import CurrencySelect from "./CurrencySelect";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 
 const BASE_URL = "https://api.exchangeratesapi.io/latest";
 
@@ -201,12 +201,12 @@ function App() {
     <>
       <Row>
         <Col>
-          <Card className="pl-3 pr-3 pt-5 border-0 rounded-0 h-100">
-            <Card.Header className="border-0 bg-white pt-5">
+          <Card className="pl-3 pr-3 pt-5 border-0 rounded-0 h-100 bg-light-blue">
+            <Card.Header className="border-0 bg-light-blue pt-5">
               <Link to="/settings" className="text-dark mb-3 pt-5">
                 <FontAwesomeIcon
                   className="fa-lg text-dark"
-                  icon={faArrowLeft}
+                  icon={faChevronLeft}
                 />
               </Link>
               <h1 className="md-title-text text-center mt-5">
@@ -214,6 +214,9 @@ function App() {
               </h1>
             </Card.Header>
             <Card.Body>
+              <p className="text-center mb-4 sm-title-text text-secondary">
+                Set your budget
+              </p>
               <p className="text-secondary sm-title-text">From</p>
               <CurrencySelect
                 currencyOptions={currencyOptions}
@@ -227,7 +230,7 @@ function App() {
                 onChangeCurrency={(e) => setToCurrency(e.target.value)}
               />
             </Card.Body>
-            <Card.Footer className="border-0 bg-white text-center">
+            <Card.Footer className="border-0 bg-light-blue text-center">
               <Button onClick={onSubmit} variant="btn btn-blue rounded-50 mb-5">
                 Set
               </Button>

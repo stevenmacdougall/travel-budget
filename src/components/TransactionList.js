@@ -14,7 +14,7 @@ export const TransactionList = () => {
 
   return (
     <>
-      <Card id="expenses-list" className="p-4 border-0">
+      <Card id="expenses-list" className="p-4 border-0 bg-light-blue">
         <Row className="mt-3 mb-4">
           <Col className="pt-2">
             <h3 className="font-weight-bold md-title-text d-inline">
@@ -24,7 +24,7 @@ export const TransactionList = () => {
           <Col className="text-right">
             <Link to="/add-transaction">
               <FontAwesomeIcon
-                className="fa-3x text-blue bg-white rounded-circle"
+                className="fa-3x text-blue bg-white rounded-circle shadow"
                 icon={faPlusCircle}
               />
             </Link>

@@ -6,7 +6,7 @@ import { useHistory } from "react-router-dom";
 import { Row, Col, Card, Button } from "react-bootstrap";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 
 export const Settings = () => {
   const history = useHistory();
@@ -27,7 +27,10 @@ export const Settings = () => {
         <Card className="pl-3 pr-3 pt-5 border-0 rounded-0 h-100">
           <Card.Header className="pt-5 border-0 bg-white">
             <Link to="/" className="text-dark mb-3 pt-5">
-              <FontAwesomeIcon className="fa-lg text-dark" icon={faArrowLeft} />
+              <FontAwesomeIcon
+                className="fa-lg text-dark"
+                icon={faChevronLeft}
+              />
             </Link>
             <h1 className="md-title-text text-center mt-5">Settings</h1>{" "}
           </Card.Header>
