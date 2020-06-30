@@ -1,8 +1,18 @@
+## About
+
+About
+A react app prototype. Travel Budget is like a translator for your wallet. Add your expenses to the app as you travel. Based on your currency settings and budget, Travel Budget will update and display your spending and budget metrics in multiple currencies.
+
+Demo URL:
+https://stevenmacdougall.github.io/travel-budget/
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
-
-In the project directory, you can run:
+## Set-up
+```npx create-react-app run-log```<br />
+```npm install --save react-router-dom```<br />
+```npm install react-bootstrap bootstrap```<br />
+```npm i --save @fortawesome/fontawesome-svg-core  @fortawesome/free-solid-svg-icons @fortawesome/react-fontawesome```<br />
 
 ### `npm start`
 
